@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b40b9b03-329d-4876-a602-5b76725a6ac9/resourceGroups/myResourceGroup/providers/Microsoft.Web/sites/ferryman8",
+    "appService.deploySubpath": "."
+}

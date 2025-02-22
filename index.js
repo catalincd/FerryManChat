@@ -27,7 +27,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.get('/data', (req, res) => {
+app.get('/api/data', (req, res) => {
     res.json({
         messages,
         users
@@ -35,7 +35,7 @@ app.get('/data', (req, res) => {
     )
 });
 
-app.post('/message', (req, res) => {
+app.post('/api/message', (req, res) => {
     const data = req.body;
 
     console.log(data)
@@ -52,7 +52,7 @@ app.post('/message', (req, res) => {
     });
 });
 
-app.post('/upload', upload.single('profilePic'), (req, res) => {
+app.post('/api/upload', upload.single('profilePic'), (req, res) => {
     const username = req.body.username;
     const profilePic = req.file;
 

@@ -14,7 +14,7 @@ const send = () => {
         message: msg
     }
 
-    fetch(`${URL}/message`, {
+    fetch(`${URL}/api/message`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const send = () => {
 
 
 const receive = () => {
-    fetch(`${URL}/data`, {
+    fetch(`${URL}/api/data`, {
         method: 'GET'
       })
         .then((response) => response.json())
@@ -100,7 +100,7 @@ async function submitDetails() {
     formData.append("profilePic", profilePic);
 
     try {
-        const response = await fetch(`${URL}/upload`, {
+        const response = await fetch(`${URL}/api/upload`, {
             method: 'POST',
             body: formData
         });

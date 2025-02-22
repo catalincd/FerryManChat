@@ -1,5 +1,5 @@
-const SERVER_IP = "86.125.70.253:3000";
-const URL = `http://${SERVER_IP}`
+//const SERVER_IP = "86.125.70.253:3000";
+const URL = `https://ferryman8.azurewebsites.net/`
 
 var USERNAME = "WZD"
 

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    font-family: "Poppins", serif;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+#popupContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+input[type="file"] {
+    margin: 10px 0;
+}
+
+#container {
+    /* make glass and change gradient to cyan */
+    margin: 5rem auto;
+    width: min(60rem, 90%);
+    padding: 1rem 3rem;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+#messages {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#messages > .msg {
+    width: 75%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1rem;
+}
+
+#messages > .msg.own {
+    margin-left: 25%;
+    max-width: 75%;
+    grid-template-columns: auto;
+    grid-gap: 1rem;
+    text-align: right;
+}
+
+.msg > .text {
+    background-color: #EBD2B4;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 1); 
+    padding: 1rem;
+    padding-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.text > .name {
+    font-weight: bold;
+}
+
+.text > .messageText {
+    padding-bottom: 0.35rem;
+    padding-top: 0.75rem;
+}
+
+.msg > .profile {
+
+}
+
+.msg.own > .profile {
+    display: none;
+}
+
+.profile > .msgImgContainer {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.msgImgContainer > img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+
+
+#write {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 1rem;
+}
+
+#write input {
+    outline: none;
+    border: none;
+    font-size: large;
+    padding: 1rem;
+    background-color: #EBD2B4;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+#write input:focus {
+    outline: none;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 1); 
+}
+
+#write button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+   background-color: white;
+   border: 3px solid white;
+   cursor: pointer;
+}
+
+#write button:hover {
+   background-color: cyan;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+
+#participants {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+}
+
+#participants > .imgContainer {
+    width: 3rem;
+    height: 3rem;
+}
+
+.imgContainer > img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+body,
+.gradient-background {
+    background: linear-gradient(91deg,deepskyblue,#0092ff,#00d4ff);
+    background-size: 240% 240%;
+    animation: gradient-animation 24s ease infinite;
+    background-blend-mode: overlay;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=send" />
+    
+    <title>Ferry Chatnpm</title>
+</head>
+<body>
+    <div id="popup">
+        <div id="popupContent">
+            <h2>Set up your profile</h2>
+            <label for="username">Enter your username:</label><br>
+            <input type="text" id="username" name="username"><br><br>
+            
+            <label for="profilePic">Choose a profile picture:</label><br>
+            <input type="file" id="profilePic" name="profilePic" accept="image/*"><br><br>
+            
+            <button onclick="submitDetails()">Log in</button>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="title">
+            <h1>Ferry-Man Chat</h1>
+        </div>
+        <div id="participants">
+            
+        </div>
+        <div id="messages">
+        </div>
+        <div id="write">
+            <input id="msgInput" name="msgInput" type="text" placeholder="Type a message...">
+            <button onClick="send()">
+                <span class="material-symbols-outlined">
+                    send
+                </span>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
